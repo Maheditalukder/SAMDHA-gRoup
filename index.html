@@ -1,145 +1,708 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAMDHA GROUP</title>
-    <style>
-        html { scroll-behavior: smooth; }
-        body { margin: 0; font-family: Arial, sans-serif; background-color: white; }
-        header { background-color: white; text-align: center; padding: 20px; }
-        .logo-circle { width: 70px; height: 70px; background-color: black; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: auto; font-size: 25px; font-weight: bold; }
-        .logo-name { font-size: 28px; font-weight: bold; margin-top: 10px; }
-        .tagline { color: gray; margin-top: 5px; }
-        nav { background-color: black; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 100; }
-        nav a { color: white; text-decoration: none; margin: 10px; font-size: 17px; }
-        nav a:hover { text-decoration: underline; }
-        .hero { min-height: 500px; background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url("https://images.unsplash.com/photo-1497366811353-6870744d04b2"); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
-        .hero-content { max-width: 750px; padding: 20px; }
-        .hero h1 { font-size: 50px; margin-bottom: 10px; }
-        .hero h2 { font-size: 25px; }
-        .hero p { font-size: 18px; line-height: 1.7; }
-        .hero-button { display: inline-block; margin-top: 20px; padding: 13px 25px; background-color: white; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
-        .about { text-align: center; padding: 60px 20px; }
-        .about h2 { font-size: 30px; }
-        .about h3 { font-size: 24px; margin-top: 30px; }
-        .about p { max-width: 700px; margin: 15px auto; line-height: 1.8; font-size: 17px; }
-        .about-image { width: 90%; max-width: 700px; border-radius: 12px; margin-top: 20px; }
-        .services { text-align: center; padding: 60px 20px; background-color: #f4f4f4; }
-        .services h2,.projects h2,.structure h2,.contact h2 { font-size: 30px; }
-        .service-container,.project-container,.structure-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
-        .service-card,.project,.structure-card { width: 250px; padding: 30px 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .service-card { background-color: white; }
-        .service-card:hover { transform: translateY(-5px); }
-        .service-icon,.project-icon,.structure-icon { font-size: 45px; }
-        .service-card h3,.project h3,.structure-card h3 { font-size: 21px; }
-        .service-card p,.project p,.structure-card p { line-height: 1.6; }
-        .service-card button { padding: 10px 20px; border: none; border-radius: 7px; background-color: black; color: white; cursor: pointer; }
-        #serviceMessage { margin-top: 25px; font-weight: bold; }
-        .projects { text-align: center; padding: 60px 20px; }
-        .project { background-color: #f4f4f4; }
-        .structure { text-align: center; padding: 60px 20px; background-color: #f4f4f4; }
-        .structure > p { max-width: 650px; margin: 15px auto; line-height: 1.7; }
-        .structure-card { background-color: white; }
-        .future-business { max-width: 800px; margin: 45px auto 0; padding: 30px 20px; background-color: white; border-radius: 12px; }
-        .future-business h3 { font-size: 24px; }
-        .future-business p { line-height: 1.7; }
-        .business-flow { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin-top: 25px; font-weight: bold; }
-        .contact { text-align: center; padding: 60px 20px; }
-        .contact-info { margin-bottom: 30px; line-height: 1.8; }
-        .contact-form { max-width: 500px; margin: auto; text-align: left; }
-        .contact-form label { display: block; margin-top: 15px; margin-bottom: 5px; font-weight: bold; }
-        .contact-form input,.contact-form textarea { width: 100%; padding: 12px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 7px; font-size: 16px; }
-        .contact-form textarea { height: 130px; }
-        .contact-form button { margin-top: 20px; padding: 12px 25px; background-color: black; color: white; border: none; border-radius: 7px; font-size: 16px; cursor: pointer; }
-        #formMessage { margin-top: 20px; font-weight: bold; }
-        footer { background-color: black; color: white; text-align: center; padding: 25px; }
-        @media (max-width: 600px) {
-            .logo-name { font-size: 23px; }
-            nav a { display: inline-block; margin: 6px; font-size: 14px; }
-            .hero { min-height: 450px; }
-            .hero h1 { font-size: 35px; }
-            .hero h2 { font-size: 20px; }
-            .hero p { font-size: 16px; }
-            .service-card,.project,.structure-card { width: 85%; }
-            .business-flow { flex-direction: column; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="SAMDHA GROUP - ব্যবসা, ব্যবস্থাপনা ও উন্নয়নের একটি সংগঠিত উদ্যোগ।">
+  <title>SAMDHA GROUP | Business & Management</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1769aa;
+      --green: #13805c;
+      --light: #f3f6fa;
+      --white: #ffffff;
+      --text: #243447;
+      --muted: #64748b;
+      --border: #dce4ed;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans Bengali", sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    button, input, textarea { font: inherit; }
+
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    a { color: inherit; text-decoration: none; }
+
+    button { cursor: pointer; }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 10px 5%;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    header {
+      background: white;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .logo {
+      width: 43px;
+      height: 43px;
+      border-radius: 12px;
+      background: var(--navy);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover { color: var(--blue); }
+
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 9px;
+      padding: 11px 17px;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+    }
+
+    .btn:hover { opacity: .9; }
+
+    .btn-outline {
+      background: white;
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #102a43, #1769aa);
+      color: white;
+      padding: 75px 7%;
+    }
+
+    .hero-inner {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #b8e6d4;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 6vw, 54px);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #e2edf7;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .hero .btn-outline {
+      background: transparent;
+      border-color: #b8cde0;
+      color: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 5%;
+    }
+
+    .section-heading {
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 28px;
+    }
+
+    .section-heading p { color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 23px;
+      min-width: 0;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin: 10px 0;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card-icon {
+      font-size: 28px;
+    }
+
+    .about {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .about h2 { color: var(--navy); }
+
+    .principle {
+      padding: 13px 15px;
+      border-left: 4px solid var(--green);
+      background: var(--light);
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    .contact-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 24px;
+    }
+
+    .contact-box input,
+    .contact-box textarea,
+    .field {
+      width: 100%;
+      padding: 12px;
+      margin: 6px 0 13px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      color: var(--text);
+    }
+
+    footer {
+      padding: 28px 5%;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* Admin dashboard preview */
+
+    .admin-page {
+      min-height: 80vh;
+      padding: 25px 4%;
+      background: #f1f5f9;
+    }
+
+    .admin-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .admin-layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    .sidebar {
+      background: var(--navy);
+      color: white;
+      border-radius: 14px;
+      padding: 18px 12px;
+      align-self: start;
+    }
+
+    .sidebar h3 { padding: 0 10px; }
+
+    .side-btn {
+      display: block;
+      width: 100%;
+      border: 0;
+      text-align: left;
+      padding: 12px 10px;
+      margin: 4px 0;
+      border-radius: 8px;
+      background: transparent;
+      color: white;
+    }
+
+    .side-btn:hover,
+    .side-btn.active {
+      background: #294b68;
+    }
+
+    .admin-content { min-width: 0; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .stat {
+      background: white;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .stat-number {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-top: 8px;
+    }
+
+    .notice {
+      background: #fff8df;
+      border: 1px solid #f0d78c;
+      color: #765400;
+      border-radius: 10px;
+      padding: 13px;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    .admin-panel {
+      background: white;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      margin-bottom: 18px;
+      overflow-wrap: anywhere;
+    }
+
+    .admin-panel h3 { margin-top: 0; color: var(--navy); }
+
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 430px;
+      font-size: 14px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background: #f6f8fb;
+      color: var(--navy);
+    }
+
+    .status {
+      display: inline-block;
+      border-radius: 20px;
+      padding: 3px 9px;
+      background: #e1f5eb;
+      color: #116345;
+      font-size: 12px;
+    }
+
+    .hidden { display: none !important; }
+
+    .empty-state {
+      color: var(--muted);
+      padding: 18px 0;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .small-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 760px) {
+      header { align-items: flex-start; }
+
+      nav {
+        width: 100%;
+        gap: 12px;
+      }
+
+      nav a { font-size: 13px; }
+
+      .hero { padding: 50px 6%; }
+
+      .grid { grid-template-columns: 1fr; }
+
+      .about-inner { grid-template-columns: 1fr; }
+
+      .admin-layout { grid-template-columns: 1fr; }
+
+      .sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .sidebar h3 { grid-column: 1 / -1; }
+
+      .stats { grid-template-columns: 1fr; }
+
+      .container { padding: 35px 5%; }
+
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-    <div class="logo-circle">SG</div>
-    <div class="logo-name">SAMDHA GROUP</div>
-    <div class="tagline">Building Ideas • Creating Future</div>
-</header>
-<nav>
-    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#structure">Structure</a><a href="#contact">Contact</a>
-</nav>
-<section id="home" class="hero">
-    <div class="hero-content">
+  <div class="topbar">
+    SAMDHA GROUP — সততা, সংগঠন ও দায়িত্বশীল উন্নয়নের পথে
+  </div>
+
+  <header>
+    <a class="brand" href="#home" aria-label="SAMDHA GROUP Home">
+      <span class="logo">SG</span>
+      <span>SAMDHA GROUP</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <button class="btn" type="button" onclick="showAdmin()">
+        Admin Preview
+      </button>
+    </nav>
+  </header>
+
+  <main id="website">
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="eyebrow">WELCOME TO OUR ORGANIZATION</div>
         <h1>SAMDHA GROUP</h1>
-        <h2>Building Ideas • Creating Future 🚀</h2>
-        <p>আমরা আধুনিক প্রযুক্তি এবং নির্ভরযোগ্য Business Service-এর মাধ্যমে নতুন সম্ভাবনা তৈরি করতে কাজ করি।</p>
-        <a href="#services" class="hero-button">আমাদের সেবা দেখুন</a>
+        <p>
+          একটি সংগঠিত ব্যবসায়িক কাঠামো গড়ার উদ্যোগ।
+          আমাদের লক্ষ্য হলো পরিকল্পনা, সঠিক হিসাব,
+          দায়িত্বশীল ব্যবস্থাপনা এবং দীর্ঘমেয়াদি উন্নয়ন।
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#about">আমাদের সম্পর্কে</a>
+          <a class="btn btn-outline" href="#services">আমাদের কার্যক্রম</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="services">
+      <div class="section-heading">
+        <h2>আমাদের কার্যক্রম</h2>
+        <p>ভবিষ্যতে প্রয়োজন অনুযায়ী নতুন ব্যবসা ও সেবা যুক্ত করা যাবে।</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon">🏢</div>
+          <h3>Business Management</h3>
+          <p>বিভিন্ন ব্যবসা, শাখা ও ব্যবস্থাপনার জন্য একটি সংগঠিত কাঠামো।</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3>Accounts & Records</h3>
+          <p>ভবিষ্যতে আয়-ব্যয়, লেনদেন ও ব্যবসার রেকর্ড পরিচালনার ব্যবস্থা।</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Team & Partners</h3>
+          <p>দায়িত্ব, অনুমতি ও কাজের ভিত্তিতে সদস্য এবং অংশীদার ব্যবস্থাপনা।</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-inner">
+        <div>
+          <h2>আমাদের সম্পর্কে</h2>
+          <p>
+            SAMDHA GROUP-এর এই ওয়েবসাইটটি একটি প্রাথমিক
+            ব্যবসায়িক প্ল্যাটফর্ম। ভবিষ্যতে নতুন ব্যবসা,
+            শাখা, ম্যানেজার ও সদস্যদের জন্য প্রয়োজনীয়
+            সুবিধা ধাপে ধাপে যুক্ত করার পরিকল্পনা রয়েছে।
+          </p>
+        </div>
+
+        <div>
+          <div class="principle">✓ সততা ও স্বচ্ছতা</div>
+          <div class="principle">✓ দায়িত্বশীল ব্যবস্থাপনা</div>
+          <div class="principle">✓ নিয়ম মেনে হিসাব সংরক্ষণ</div>
+          <div class="principle">✓ নিরাপদ তথ্য ব্যবস্থাপনা</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <div class="section-heading">
+        <h2>যোগাযোগ</h2>
+        <p>যোগাযোগের তথ্য পরে এখানে যোগ করা যাবে।</p>
+      </div>
+
+      <div class="contact-box">
+        <p><strong>Organization:</strong> SAMDHA GROUP</p>
+        <p><strong>Website:</strong> samdhagroup.com (ভবিষ্যৎ পরিকল্পনা)</p>
+        <p class="small-note">
+          এই প্রাথমিক সংস্করণে যোগাযোগের ফর্ম সার্ভারে তথ্য পাঠায় না।
+          কার্যকর ফর্মের জন্য পরে ব্যাকএন্ড বা ফর্ম সেবা যুক্ত করতে হবে।
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- This is a frontend preview, not a secure admin system. -->
+  <main id="admin" class="admin-page hidden">
+    <div class="admin-top">
+      <div>
+        <h2 style="margin:0;color:#102a43;">SAMDHA GROUP</h2>
+        <div class="small-note">Admin Dashboard Preview</div>
+      </div>
+      <button class="btn btn-outline" type="button" onclick="showWebsite()">
+        ← ওয়েবসাইটে ফিরে যাও
+      </button>
     </div>
-</section>
-<section id="about" class="about">
-    <h2>আমাদের সম্পর্কে</h2>
-    <img class="about-image" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" alt="Business Office">
-    <h3>আমাদের Vision 🎯</h3>
-    <p>নিয়ম-কানুন, সঠিক হিসাব, দক্ষ মানুষ ও প্রযুক্তির সমন্বয়ে একটি শক্তিশালী ব্যবসায়িক কাঠামো তৈরি করা।</p>
-    <p>এই কাঠামোকে ভবিষ্যতে একাধিক ব্যবসা ও শাখায় সম্প্রসারণ করা, যাতে প্রতিটি Business একটি সুসংগঠিত System-এর মাধ্যমে পরিচালিত হতে পারে।</p>
-</section>
-<section id="services" class="services">
-    <h2>আমাদের সেবা</h2>
-    <div class="service-container">
-        <div class="service-card"><div class="service-icon">💻</div><h3>Web Development</h3><p>আধুনিক এবং Mobile Friendly Website তৈরি করা।</p><button onclick="serviceMessage('Web Development')">বিস্তারিত</button></div>
-        <div class="service-card"><div class="service-icon">📱</div><h3>Digital Services</h3><p>বিভিন্ন ধরনের Digital Business Solution তৈরি করা।</p><button onclick="serviceMessage('Digital Services')">বিস্তারিত</button></div>
-        <div class="service-card"><div class="service-icon">🤝</div><h3>Business Support</h3><p>Business System এবং Technology Support।</p><button onclick="serviceMessage('Business Support')">বিস্তারিত</button></div>
+
+    <div class="notice">
+      সতর্কতা: এটি শুধু নকশা ও কাজের প্রিভিউ।
+      এখানে প্রকৃত লগইন, নিরাপদ ডেটাবেস বা বাস্তব আর্থিক হিসাব নেই।
+      সংবেদনশীল তথ্য এখানে লিখবে না।
     </div>
-    <p id="serviceMessage"></p>
-</section>
-<section id="projects" class="projects">
-    <h2>আমাদের Projects</h2><p>নিচেরগুলো আমাদের Website-এর Demo / Sample Project।</p>
-    <div class="project-container">
-        <div class="project"><div class="project-icon">🌐</div><h3>Company Website</h3><p>Professional Company Website Design।</p></div>
-        <div class="project"><div class="project-icon">🛒</div><h3>Online Store</h3><p>Product এবং Online Business Website-এর Demo।</p></div>
-        <div class="project"><div class="project-icon">📊</div><h3>Business Dashboard</h3><p>Business Data এবং Management Dashboard-এর Demo।</p></div>
+
+    <div class="admin-layout">
+      <aside class="sidebar">
+        <h3>Admin Menu</h3>
+        <button class="side-btn active" onclick="openPanel('dashboard', this)">📊 Dashboard</button>
+        <button class="side-btn" onclick="openPanel('businesses', this)">🏢 Businesses</button>
+        <button class="side-btn" onclick="openPanel('members', this)">👥 Members</button>
+        <button class="side-btn" onclick="openPanel('accounts', this)">📒 Accounts</button>
+        <button class="side-btn" onclick="openPanel('savings', this)">🤝 Savings</button>
+        <button class="side-btn" onclick="openPanel('settings', this)">⚙️ Settings</button>
+      </aside>
+
+      <div class="admin-content">
+        <section id="panel-dashboard" class="admin-panel">
+          <h3>Dashboard Overview</h3>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-label">Business Units</div>
+              <div class="stat-number" id="businessCount">0</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Members (sample)</div>
+              <div class="stat-number">0</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Accounts</div>
+              <div class="stat-number">Not connected</div>
+            </div>
+          </div>
+          <p>এই ড্যাশবোর্ডে ভবিষ্যতে বাস্তব ডেটাবেস থেকে তথ্য দেখানো হবে।</p>
+        </section>
+
+        <section id="panel-businesses" class="admin-panel hidden">
+          <h3>Business Management</h3>
+          <p>এখানে শুধু এই ব্রাউজারের বর্তমান সেশনে ব্যবসার নাম যোগ করা যাবে।
+             এটি স্থায়ী বা সুরক্ষিত সংরক্ষণ নয়।</p>
+
+          <form id="businessForm">
+            <label for="businessName">ব্যবসার নাম</label>
+            <input class="field" id="businessName" maxlength="80"
+              placeholder="যেমন: Trading Business" required>
+            <button class="btn" type="submit">ব্যবসা যোগ করো</button>
+          </form>
+
+          <div class="table-wrap" style="margin-top:20px;">
+            <table>
+              <thead>
+                <tr><th>Business Name</th><th>Status</th></tr>
+              </thead>
+              <tbody id="businessRows">
+                <tr id="noBusinesses"><td colspan="2">এখনো কোনো ব্যবসা যোগ করা হয়নি।</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="panel-members" class="admin-panel hidden">
+          <h3>Members & Managers</h3>
+          <p>এখানে ভবিষ্যতে সদস্য, ম্যানেজার, দায়িত্ব ও অনুমতি পরিচালনা করা হবে।</p>
+          <div class="empty-state">ডেটাবেস ও নিরাপদ লগইন যুক্ত হলে এই অংশ সক্রিয় হবে।</div>
+        </section>
+
+        <section id="panel-accounts" class="admin-panel hidden">
+          <h3>Accounts & Transactions</h3>
+          <p>ভবিষ্যতে তারিখ, বিবরণ, জমা, খরচ, অনুমোদন ও হিসাবের রিপোর্ট থাকবে।</p>
+          <div class="empty-state">বাস্তব আর্থিক হিসাবের জন্য নিরাপদ ব্যাকএন্ড প্রয়োজন।</div>
+        </section>
+
+        <section id="panel-savings" class="admin-panel hidden">
+          <h3>Savings Management</h3>
+          <p>ভবিষ্যতে সদস্যভিত্তিক জমা, যৌথ তহবিল, উত্তোলনের আবেদন এবং অনুমোদনের নিয়ম থাকবে।</p>
+          <div class="empty-state">এই প্রিভিউতে কোনো প্রকৃত জমা বা উত্তোলন করা যায় না।</div>
+        </section>
+
+        <section id="panel-settings" class="admin-panel hidden">
+          <h3>System Settings</h3>
+          <p>ভবিষ্যতে Admin permissions, business branches, backup ও activity logs থাকবে।</p>
+          <div class="empty-state">সিস্টেম সেটিংস এখনো ব্যাকএন্ডের সঙ্গে যুক্ত নয়।</div>
+        </section>
+      </div>
     </div>
-</section>
-<section id="structure" class="structure">
-    <h2>আমাদের Business Structure 🏢</h2><p>একটি শক্তিশালী ব্যবসা গড়ে তুলতে আমরা চারটি মূল ভিত্তির ওপর গুরুত্ব দিই।</p>
-    <div class="structure-container">
-        <div class="structure-card"><div class="structure-icon">📋</div><h3>নিয়ম-কানুন</h3><p>প্রতিটি কাজের জন্য পরিষ্কার নিয়ম, দায়িত্ব এবং Process।</p></div>
-        <div class="structure-card"><div class="structure-icon">💰</div><h3>হিসাব</h3><p>আয়, ব্যয়, Budget এবং Financial Record সঠিকভাবে রাখা।</p></div>
-        <div class="structure-card"><div class="structure-icon">👥</div><h3>মানুষ</h3><p>দক্ষ মানুষ, দায়িত্ব ভাগ করা এবং Team Management।</p></div>
-        <div class="structure-card"><div class="structure-icon">💻</div><h3>প্রযুক্তি</h3><p>Website, Software, Data এবং Digital Business System।</p></div>
-    </div>
-    <div class="future-business">
-        <h3>ভবিষ্যতের সম্প্রসারণ 🚀</h3><p>একটি শক্তিশালী System তৈরি হওয়ার পর নতুন Business এবং Branch ধাপে ধাপে যুক্ত করা যাবে।</p>
-        <div class="business-flow"><span>🏢 SAMDHA GROUP</span><span>→</span><span>💼 Business 1</span><span>→</span><span>🏪 Branch</span><span>→</span><span>🚀 Business 2</span></div>
-    </div>
-</section>
-<section id="contact" class="contact">
-    <h2>যোগাযোগ করুন</h2>
-    <div class="contact-info"><p>📧 Email: example@samdha.com</p><p>📞 Phone: +880 1XXXXXXXXX</p></div>
-    <form class="contact-form" onsubmit="sendMessage(event)">
-        <label for="name">আপনার নাম</label><input type="text" id="name" placeholder="আপনার নাম লিখুন" required>
-        <label for="email">Email</label><input type="email" id="email" placeholder="আপনার Email লিখুন" required>
-        <label for="userMessage">Message</label><textarea id="userMessage" placeholder="আপনার Message লিখুন" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-    <p id="formMessage"></p>
-</section>
-<footer><p>© 2026 SAMDHA GROUP</p><p>Building Ideas • Creating Future 🚀</p></footer>
-<script>
-    function serviceMessage(service) {
-        document.getElementById("serviceMessage").innerHTML = "আপনি " + service + " সম্পর্কে জানতে চেয়েছেন। ✅";
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> SAMDHA GROUP. All rights reserved.</p>
+    <p>Built for organized and responsible business management.</p>
+  </footer>
+
+  <script>
+    const website = document.getElementById("website");
+    const admin = document.getElementById("admin");
+
+    function showAdmin() {
+      website.classList.add("hidden");
+      admin.classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-    function sendMessage(event) {
-        event.preventDefault();
-        document.getElementById("formMessage").innerHTML = "আপনার Message সফলভাবে গ্রহণ করা হয়েছে! ✅";
+
+    function showWebsite() {
+      admin.classList.add("hidden");
+      website.classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-</script>
+
+    function openPanel(name, button) {
+      document.querySelectorAll(".admin-content > section")
+        .forEach(section => section.classList.add("hidden"));
+
+      document.getElementById("panel-" + name).classList.remove("hidden");
+
+      document.querySelectorAll(".side-btn")
+        .forEach(item => item.classList.remove("active"));
+
+      button.classList.add("active");
+    }
+
+    let businessCount = 0;
+
+    document.getElementById("businessForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const input = document.getElementById("businessName");
+      const name = input.value.trim();
+
+      if (!name) return;
+
+      const empty = document.getElementById("noBusinesses");
+      if (empty) empty.remove();
+
+      const row = document.createElement("tr");
+      const nameCell = document.createElement("td");
+      const statusCell = document.createElement("td");
+      const status = document.createElement("span");
+
+      nameCell.textContent = name;
+      status.textContent = "Preview only";
+      status.className = "status";
+
+      statusCell.appendChild(status);
+      row.appendChild(nameCell);
+      row.appendChild(statusCell);
+
+      document.getElementById("businessRows").appendChild(row);
+
+      businessCount++;
+      document.getElementById("businessCount").textContent = businessCount;
+      input.value = "";
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
